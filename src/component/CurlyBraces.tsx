@@ -34,7 +34,7 @@ export function TodoList() {
     // 객체를 name과 theme로 쪼갬
     const { name, theme} = person;
 
-    return (
+    return ( 
         <div style={theme}>
             <h1>{name }'s Todos</h1>
             <img
