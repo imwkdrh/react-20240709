@@ -83,7 +83,7 @@ export default function Component() {
     // 1. 반드시 하나의 요소를 반환
     // 2. 모든 태그를 닫아야함
     // 3. 속성들을 JSX로 지정된 이름을 사용해야함 (lowerCamelCase)
-    // 4. 주석을 사용할 땐 { /* */}를 사용
+    // 4. 주석을 사용할 땐 {/* */}를 사용
     return (
         <>
             {/* <input className='' /> */}
