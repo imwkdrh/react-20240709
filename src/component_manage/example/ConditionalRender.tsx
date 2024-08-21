@@ -46,7 +46,7 @@ function TreeTermComponent({ num }: Props) {
 function LogicComponent({ num }: Props) {
     // num이 짝수일 때만 렌더링
     return (
-        <h1>num: {(num % 2 == 0) && num} </h1>
+        <h1>num: {(num % 2 === 0) && num} </h1>
     )
 }
 
