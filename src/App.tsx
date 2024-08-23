@@ -9,6 +9,7 @@ import Example2 from './component_manage/example/Example2';
 import ListRender from './component_manage/example/ListRender';
 import EventComponent from './interaction/EventComponent';
 import StateComponent from './interaction/StateComponent';
+import FowardingComponent from './interaction/FowardingComponent';
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
       {/* <Example2 /> */}
       {/* <ListRender/> */}
       {/* <EventComponent/> */}
-      <StateComponent />
+      {/* <StateComponent /> */}
+      <FowardingComponent />
     </>
   );
 }
