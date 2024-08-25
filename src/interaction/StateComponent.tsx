@@ -7,7 +7,7 @@ import React, { ChangeEvent, useState } from 'react'
 // - 상태가 변경되면 컴포넌트가 리렌더링 됨
 export default function StateComponent() {
 
-    // state 선언 방법
+    // state 선언 방법 
     // - useState 훅 함수로 상태를 선언
     // - const [상태변수, 상태변경함수] = useState<상태변수타입>(초기값);
 
