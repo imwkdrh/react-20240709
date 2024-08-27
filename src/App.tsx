@@ -9,7 +9,8 @@ import Example2 from './component_manage/example/Example2';
 import ListRender from './component_manage/example/ListRender';
 import EventComponent from './interaction/EventComponent';
 import StateComponent from './interaction/StateComponent';
-import FowardingComponent from './interaction/FowardingComponent';
+import FowardingComponent from './interaction/ForwardingComponent';
+import HookComponent1 from './hook/HookComponent1';
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       {/* <ListRender/> */}
       {/* <EventComponent/> */}
       {/* <StateComponent /> */}
-      <FowardingComponent />
+      {/* <FowardingComponent /> */}
+      <HookComponent1 />
     </>
   );
 }
