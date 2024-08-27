@@ -75,7 +75,7 @@ export default function CustomHook() {
             </div>
             <div>{state2}
                 <button onClick={onState2Add}>state2 +</button></div>
-        </div>
+        </div>  
     )
     
     };
