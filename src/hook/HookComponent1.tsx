@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import App from './../App';
 
 
 
@@ -21,7 +22,7 @@ import React, { useEffect, useState } from 'react'
 export default function HookComponent1() {
 
     const [state1, setState1] = useState<number>(0);
-
+    const [show, setShow] = useState<boolean>(true);
     // const func = () => {
     //     const [state3, setSate3] = useState<number>(0);
     // }
@@ -36,7 +37,11 @@ export default function HookComponent1() {
     // - 개발 실행 환경에서는 mount - unmount가 한번 실행 되고난 후 mount됨
 
     const onAddClickHandler = () => {
-        setState1(state1+1);
+        setState1(state1 + 1);
+    }
+
+    const onShowClickHandler = () => {
+        setShow(!show);
     }
 
     // mount시에만 실행
@@ -45,14 +50,39 @@ export default function HookComponent1() {
     // useEffect(() => { console.log('두번째 effect!'); setState1(state1+1) });
 
     // 스코프할 상태 배열에 상태를 지정하면 지정한 상태가 바뀔때마다 함수가 호출됨
-    useEffect(() => { /*setState1(state1 + 1);*/ console.log('state1 상태 변경!')}, [state1]);
+    useEffect(() => {
+        // 스코프할 상태 배열에 지정한 상태를 해당 effect에서 변경하면 무한 호출됨
+        /*setState1(state1 + 1);*/
+        console.log('state1 상태 변경!')
+    }, [state1]);
+
+    // 스코프할 상태 배열에 두 개 이상의 상태를 지정할 수 있음
+    // 배열에 포함된 상태 중 하나라도 변경되면 effect가 발생
+    useEffect(() => { console.log('state1 혹은 show가 변경됨') }, [state1, show])
     return (
-        <div>{state1} <button onClick={(onAddClickHandler)}>+</button></div>
+        <div>
+            {state1}
+            <button onClick={(onAddClickHandler)}>+</button>
+            <button onClick={(onShowClickHandler)}>show</button>
+            {show && <SubComponent />}
+        </div>
+
     )
 }
 
 function SubComponent() {
+
+    useEffect(() => {
+        // 전달한 콜백 함수의 return으로 컴포넌트가 unmount 될 때 실행할 함수를 반환
+        // 상태 스코프와 연결하여 사용할 필요가 없음
+        console.log('sub component mount!');
+        return () => { console.log('sub component unmount!') }
+
+    }, []);
+
+
     return (
-        <div>sub</div>
+
+        <h1>sub</h1>
     )
 }
