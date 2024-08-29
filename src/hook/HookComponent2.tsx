@@ -18,7 +18,7 @@ export default function HookComponent2() {
         // inputElement?.focus();
 
         // useRef로 생성한 참조 객체는 해당 변수의 current속성에 들어있음
-        // 특정 객체에서 속성및 메서드를 호추하려할 때 변수의 값이 null 혹은 underfind가 아닌상태에서만
+        // 특정 객체에서 속성및 메서드를 호출하려할 때 변수의 값이 null 혹은 undefined가 아닌상태에서만
         // 작업을 수행하도록 하려면 변수?.속성 혹은 변수?.메서드()로 지정
         // inputRef.current?.focus();
 
