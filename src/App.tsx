@@ -63,7 +63,7 @@ function Layout() {
 function App() {
   return (
     <Routes>
-      <Route index element={<h1>기본 페이지</h1>} />
+      <Route index element={<h1>기본 페이지</h1>} /> 
       <Route path='/component' element={<Layout />}>
         <Route path='component' element={<Component />} />
         <Route path='function-component' element={<FunctionComponent />} />
