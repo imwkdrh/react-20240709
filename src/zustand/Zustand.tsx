@@ -39,7 +39,6 @@ export default function Zustand() {
     // zustand로 선언한 상태 사용 방법
     // const {상태, ..., 상태변경 함수, ...} = useStore훅함수();
     // const {address, setAddress} = useStore();
-
     // const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     //     const { value } = event.target;
     //     setAddress(value);
