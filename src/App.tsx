@@ -19,6 +19,7 @@ import PathVariable from './router/PathVariable';
 import PathMove from './router/PathMove';
 import Zustand from './zustand/Zustand';
 import ReactCookie from './react-cookie/ReactCookie';
+import Axios from './axios/Axios';
 
 
 
@@ -80,6 +81,7 @@ function App() {
       </Route>
       <Route path='/zustand' element={<Zustand />} />
       <Route path='/react-cookie' element={<ReactCookie />} />
+      <Route path='/axios' element={ <Axios/>} />
       <Route path='*' element={<h1>404!!!</h1>} />
 
 

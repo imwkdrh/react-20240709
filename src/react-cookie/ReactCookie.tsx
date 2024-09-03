@@ -36,7 +36,7 @@ export default function ReactCookie() {
         // 첫번째 매개변수 : 쿠키 이름
         // 두번째 매개변수 : 쿠키 값
         // 세번째 매개변수(선택) : 옵션 지정
-        // setCookie(name, value);
+        // setCookie(name, value, (선택));
 
         // 옵션
         // - path : 해당 쿠키가 적용될 경로
